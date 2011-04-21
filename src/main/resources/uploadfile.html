@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Submit!</title>
+<style type="text/css">
+ body  { background-color:PeachPuff }
+ li,h3 { color:Olive }
+ form  { border-style:solid; border-width:1px; border-color:Khaki; padding:5px }
+</style>
+</head>
+<body>
+<h3>Upload file to Admin server using URL provided by FileUploadKey</h3>
+	<ol>
+		<li>REST GET http://you.level-studios.com:55100/_services/rest/workspace/4/asset/upkey </li>
+		<li>Edit this page's HTML form, change action= to URL provided from previous. </li>
+		<li>Render this page, select file, submit. (Uploads file to funky UUID directory)</li>
+		<li>REST POST http://you.level-studios.com:55100/_services/rest/workspace/4/asset/upkey;instance=2;fileuuid=f5077e57-8d37-441b-a52d-97c3fef1aadb
+	</ol>
+	<p></p>
+	<form method="post" enctype="multipart/form-data"
+		action="http://localhost:8081/webrest/file/up" >
+		<input type="file" id="file" name="file" >
+		<input type="submit" >
+	</form>
+</body>
+</html>
