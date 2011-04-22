@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import java.net.URL;
 import java.net.HttpURLConnection;
 
-public class WebappTest extends TestCase
+public class WebappIT extends TestCase
 {
     public void testCallIndexPage() throws Exception
     {

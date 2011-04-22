@@ -12,7 +12,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-public class JerseyClientTest {
+public class JerseyClientIT {
 
 //	@Test
 	public void getHelloString() {
@@ -36,7 +36,7 @@ public class JerseyClientTest {
 			.accept(MediaType.TEXT_XML)
 			.post(ClientResponse.class, hell);
 		assertNotNull(response);
-		assertEquals("status", 201, response.getStatus());
+		assertEquals("post status", 201, response.getStatus());
 		MultivaluedMap<String, String> heads = response.getHeaders();
 		String location = heads.getFirst("Location");
 		assertNotNull("location", location);
@@ -50,7 +50,7 @@ public class JerseyClientTest {
 			.accept("text/xml")
 			.get(ClientResponse.class);
 		assertNotNull(response2);
-		assertEquals("status", 200, response2.getStatus());
+		assertEquals("get status", 200, response2.getStatus());
 		Hello entity2 = response2.getEntity(Hello.class);
 		assertNotNull("entity", entity2);
 		assertTrue(entity2.getGreeting().equals("Yo"));
