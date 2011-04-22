@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement
 public class Hello extends RestPojo {
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String greeting;
 	@XmlTransient

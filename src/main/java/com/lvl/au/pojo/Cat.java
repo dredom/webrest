@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class Cat extends RestPojo {
+	private static final long serialVersionUID = 2L;
 	private Integer id;
 	private String breed;
 	private int version;
